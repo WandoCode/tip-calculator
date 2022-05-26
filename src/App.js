@@ -2,10 +2,12 @@ import Calculator from "./component/Calculator";
 
 function App() {
   return (
-    <main className="App">
+      <>
+      <header>
       <h1>SPLITTER</h1>
+  </header>
       <Calculator />
-    </main>
+      </>
   );
 }
 
