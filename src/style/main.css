@@ -9,8 +9,95 @@ body, button, input {
   font-family: "Space Mono", sans-serif;
 }
 
-.btn--tip--active {
-  background-color: red;
+body {
+  background-color: hsl(185deg, 41%, 84%);
+  font-size: 24px;
+}
+
+header {
+  height: 6em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header h1 {
+  font-size: 1.15em;
+  letter-spacing: 0.4em;
+  width: 4.2em;
+  word-break: break-word;
+  color: hsl(186deg, 14%, 43%);
+  text-align: center;
+}
+
+.btn {
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0.2em;
+  background-color: hsl(172deg, 67%, 45%);
+  padding: 0.8em 0;
+  color: hsl(183deg, 100%, 15%);
+  font-size: 1em;
+}
+.btn--tip {
+  background-color: hsl(183deg, 100%, 15%);
+  color: hsl(0deg, 0%, 100%);
+  padding: 0.2em 0;
+  margin: 0.3em 0;
+}
+
+.input {
+  border: none;
+  padding: 0.2em 0.6em 0.2em 2em;
+  text-align: right;
+  font-size: 1em;
+  color: hsl(183deg, 100%, 15%);
+  background-color: hsl(189deg, 41%, 97%);
+  border-radius: 0.1em;
+  width: 100%;
+}
+.input--full {
+  padding-left: 0;
+}
+
+.h3 {
+  color: hsl(186deg, 14%, 43%);
+  font-size: 0.6em;
+  margin-bottom: 0.5em;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.Calculator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(0deg, 0%, 100%);
+  border-radius: 1em;
+  padding: 1.2em 1.5em;
+}
+.Calculator .input-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1em;
+}
+.Calculator .tips-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.Calculator .tips-wrapper button, .Calculator .tips-wrapper input[type=number] {
+  width: 47.5%;
 }
 
 /*# sourceMappingURL=main.css.map */

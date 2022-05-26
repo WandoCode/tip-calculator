@@ -58,7 +58,7 @@ function InputsForm(props) {
         return tipsArray.map((tip) => {
             return (
                 <button
-                    className="btn--tip"
+                    className="btn btn--tip"
                     onClick={handleTipBtn}
                     value={tip}
                     key={tip}
@@ -72,10 +72,11 @@ function InputsForm(props) {
     return (
         <form className="calculator__inputs">
             <div className="input-wrapper">
-                <label htmlFor="bill" className={"h3"}> Bill</label>
+                <label htmlFor="bill" className="h3"> Bill</label>
                 <input
                     type="number"
                     name="bill"
+                    className="input"
                     id="bill"
                     placeholder={"0"}
                     min={0}
@@ -87,17 +88,20 @@ function InputsForm(props) {
             <div className="input-wrapper">
                 <h3 className="h3">Select Tip %</h3>
 
-                {tipButtons(TIP_AMOUNT)}
+                <div className="tips-wrapper">
+                    {tipButtons(TIP_AMOUNT)}
 
-                <input
-                    type="number"
-                    name="tip"
-                    id="tip-custom"
-                    placeholder={"Custom"}
-                    value={customValue}
-                    onChange={handleCustomInput}
-                    min={0}
-                />
+                    <input
+                        className="input input--full"
+                        type="number"
+                        name="tip"
+                        id="tip-custom"
+                        placeholder={"Custom"}
+                        value={customValue}
+                        onChange={handleCustomInput}
+                        min={0}
+                    />
+                </div>
             </div>
             <div className="input-wrapper">
                 <label htmlFor="people" className="h3">Number of People</label>
@@ -105,7 +109,7 @@ function InputsForm(props) {
                     type="number"
                     name="people"
                     id="people"
-                    className={showError ? "error-display" : ""}
+                    className={showError ? "input error-display" : "input"}
                     placeholder={"0"}
                     min={0}
                     value={nbrPerson}

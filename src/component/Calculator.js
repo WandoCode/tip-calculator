@@ -15,7 +15,7 @@ function Calculator(props) {
     useEffect(() => {
         const nbrPerson = inputValue.nbrPerson;
         const bill = inputValue.bill;
-        
+
         if (nbrPerson === 0) {
             setTotalPerPers(0);
             setTipPerPers(0);
@@ -50,7 +50,7 @@ function Calculator(props) {
             <InputsForm sendInputValues={getInputValues} reset={reset}/>
             <section className="calculator__results">
                 <Results tipPerPers={tipPerPers} totalPerPers={totalPerPers}/>
-                <button className="calculator__result__reset" onClick={handleReset}>reset</button>
+                <button className="btn calculator__result__reset" onClick={handleReset}>reset</button>
             </section>
 
         </main>
