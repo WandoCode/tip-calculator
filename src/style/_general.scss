@@ -1,0 +1,9 @@
+body, button, input {
+  font-family: "Space Mono", sans-serif;
+}
+
+.btn--tip {
+  &--active {
+    background-color: red;
+  }
+}
